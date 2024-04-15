@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="cssboot/bootstrap.min.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="w-75 m-auto py-5">
+      <div class="">
+        <label for="proudctname">Product Name:</label>
+        <input class="form-control" type="text" id="proudctname" />
+      </div>
+
+      <div class="py-3">
+        <label for="proudctprice">Product Price:</label>
+        <input class="form-control" type="number" id="proudctprice" />
+      </div>
+
+      <div class="form-group">
+        <label for="Productcategory">Product Category:</label>
+        <input class="form-control" type="text" id="Productcategory" />
+      </div>
+
+      <div class="py-3">
+        <label for="proudctdesc">Product Description:</label>
+        <textarea class="form-control" type="text" id="proudctdesc"></textarea>
+      </div>
+      <button onclick="addproduct();" class="btn btn-outline-info">
+        addProduct
+      </button>
+    </div>
+    <div class="w-75 m-auto py-3">
+      <input
+        onkeyup="searchproduct(this.value)"
+        placeholder="Search Product"
+        class="w-75 form-control m-auto"
+        type="text"
+        id="searchinput"
+      />
+      <div>
+        <table class="table mt-3">
+          <thead>
+            <th>Index</th>
+            <th>ProductName</th>
+            <th>ProductPrice</th>
+            <th>ProductCategory</th>
+            <th>ProductDesc</th>
+            <th>updata</th>
+            <th>delete</th>
+          </thead>
+          <tbody id="tablebody"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
